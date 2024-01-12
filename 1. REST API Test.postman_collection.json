@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "e6323932-9a20-4b5e-a980-8bcba5154f0c",
+		"name": "1. REST API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32291673",
+		"_collection_link": "https://api-aut-test-960506.postman.co/workspace/Dummy-Test~377fc758-3dc9-4942-932b-fdca9a163ec7/collection/32291673-e6323932-9a20-4b5e-a980-8bcba5154f0c?action=share&source=collection_link&creator=32291673"
+	},
+	"item": [
+		{
+			"name": "Get All users Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_URL}}/users?page={{PAGE}}&size={{SIZE}}&sort=acs",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{PAGE}}"
+						},
+						{
+							"key": "size",
+							"value": "{{SIZE}}"
+						},
+						{
+							"key": "sort",
+							"value": "acs"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One user by userId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_URL}}/users/12",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_URL}}/users",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by userId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_URL}}/users/2",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by userId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST_URL}}/users/3",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user job by userId",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job\": \"software tester\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST_URL}}/users/2",
+					"host": [
+						"{{HOST_URL}}"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
